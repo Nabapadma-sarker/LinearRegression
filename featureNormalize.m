@@ -28,7 +28,7 @@ sigma = zeros(1, size(X, 2));
 
 mu = [1, mean(X)];
 sigma = [1, max(X) - min(X)];
-X_norm = [ones(rows(X), 1), ((X - mean(X))./(max(X) - min(X)))];
+X_norm = (X - mean(X))./(max(X) - min(X));
 
 
 
